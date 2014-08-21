@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Japanese Letters</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/hiragana.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+         <div class="container">
+           <div class="navbar-header" id="header">
+             <a class="navbar-brand active" href="#">Hiragana</a>
+             <a class="navbar-brand" href="#">Katakana</a>
+           </div>
+         </div>
+       </div>
+       <div class="container">
+         <div class="textbox">
+	   		<h1>Japanese Letters</h1>
+		<div id="message">
+			<span class="correct" style="display:none">Correct!</span>
+			<span class="wrong" style="display:none">Wrong</span>
+		</div>
+	   	<div id="testletter"></div>
+	   	<div class="answers">
+			<h4>What is this?</h4>
+			<div class="container" id="letters">
+			</div>
+	   	</div>
+         </div>
+       </div>
+</body>
+</html>

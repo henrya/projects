@@ -1,0 +1,67 @@
+/**
+*
+* styles.css
+*
+* @description. Styles for Japanese letters application
+* @version 1.0 
+* @copyright 2014 Henry ALgus. All rights reserved.
+*
+*/
+
+.navbar-brand.active {
+	color:#fff;
+}
+
+.container .textbox {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.answer {
+	margin-top:20px;
+}
+
+.answers .container {
+	width:235px;
+	margin:0 auto;
+}
+
+.row button {
+	font-size:25px;
+	width:80px;
+	margin:5px;
+}
+
+.correct,.correct:hover {
+	color:green !important;
+}
+
+.wrong,.wrong:hover {
+	color:red !important;
+}
+
+#message {
+	margin-top:30px;
+	height:5px;
+}
+
+#testletter {
+	font-size:1500%;
+	width:100%;
+	line-height:130%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
+	#testletter {
+		font-size:900%;
+		line-height:120%;
+	}
+	
+	.row button {
+		font-size:20px;
+	}
+	
+	#message {
+		margin-top:5px;
+	} 
+}
