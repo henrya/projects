@@ -11,15 +11,12 @@
 $(document).ready(function ($) {
 
 	// How many answers to show to the user
-
 	var answerCount = 4;
 	
 	// Next question timeout
-	
 	var nextQuestionTimeout = 1000;
 
 	// Shuffles array items
-	
 	var shuffleArray = function (array) {
 			for (var i = array.length - 1; i > 0; i--) {
 				var j = Math.floor(Math.random() * (i + 1));
@@ -31,7 +28,6 @@ $(document).ready(function ($) {
 	};
 	
 	// loads new question file and evals its content
-	
 	$("#header a").click(function(e){
 		e.preventDefault();
 		$(this).parent().children().removeClass('active');
@@ -48,10 +44,12 @@ $(document).ready(function ($) {
 	var generateQuestion = function () {
 			var randomized = shuffleArray(quizItems);
 			var selected = randomized.slice(0, answerCount);
+			var message = $("#message");
+			var letters = $("#letters");
 			// fade out wrong question
 			var fadeoutWrong = function(){
 					window.setTimeout(function () {
-							$("#message").children(".wrong").fadeOut();
+							message.children(".wrong").fadeOut();
 					}, 1000);
 			};
 			// show next question
@@ -65,41 +63,38 @@ $(document).ready(function ($) {
 			$("#testletter").text(answer[1]);
 			var i = 0;
 			// Empty 
-			$("#letters").html("");
-			$("#message").children().hide();
+			letters.html("");
+			message.children().hide();
 			// Shuffle all items
 			var randSelected = shuffleArray(selected);
 			var row = $("<div/>").addClass('row');
 			for (var letter in randSelected) {
-			
+				// add bootstrap col-xs-6 class to the row
 				var child = $("<div/>").addClass('col-xs-6');
 				var anchor = $("<button/>").attr('class', 'btn btn-lg btn-default').text(randSelected[letter][0]);
-
+				
 				anchor.data('item', randSelected[letter][0]);
 				anchor.click(function (e) {
 					e.preventDefault();
-					$("#message").children().hide();
+					message.children().hide();
 					var item = $(this).data('item');
 					// Chceck if answer is correct or not
 					if (item == answer['0']) {
 						$(this).addClass('correct');
-						$("#message").children(".correct").show();
+						message.children(".correct").show();
 						showNext();
 					} else {
 						$(this).addClass('wrong');
-						$("#message").children(".wrong").show();
+						message.children(".wrong").show();
 						fadeoutWrong();
 					}
 				});
 				
 				child.append(anchor);
 				row.append(child);
-				$("#letters").append(row);
-
+				letters.append(row);
 				i++;
 			}
-	};
-	
+	};	
 	generateQuestion();
-
 });
