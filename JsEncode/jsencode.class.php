@@ -9,19 +9,17 @@
  *
  */
 
-
 class jsEncode {
 
-		/**
-		 * Encodes or decodes string according to key
-		 * 
-		 * @access public
-		 * @param mixed $str
-		 * @param mixed $decodeKey
-		 * @return string
-		 */
-		 
-		public function encodeString($str,$decodeKey) {
+	    /**
+	    * Encodes or decodes string according to the key
+	    * 
+	    * @access public
+	    * @param mixed $str
+	    * @param mixed $decodeKey
+	    * @return string
+	    */
+	    public function encodeString($str,$decodeKey) {
 	       $result = "";
 	       for($i = 0;$i < strlen($str);$i++) {
 	        	$a = $this->_getCharcode($str,$i);
@@ -31,7 +29,7 @@ class jsEncode {
         
 	       return $result;
 	    }
-    
+	    
 	    /**
 	     * PHP replacement for JavaScript charCodeAt.
 	     * 
@@ -43,7 +41,7 @@ class jsEncode {
 	    private function _getCharcode($str,$i) {
 	         return $this->_uniord(substr($str, $i, 1));
 	    }
-    
+	    
 	    /**
 	     * Gets character from code.
 	     * 
@@ -58,7 +56,6 @@ class jsEncode {
 	      }
 	      return $output;
 	    }
-    
     
 	    /**
 	     * Multi byte ord function.
