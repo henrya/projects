@@ -8,7 +8,7 @@ How to use?
 
 **For JavaScript:**
 
-Load jsencode.js into your project. You can encode the "Hello world!" with a key "123" like this:
+Load jsencode.js into your project. You can encode the string with a key "123" like this:
 
 var e = jsEncode.encode("Hello world!","123");
 
@@ -20,7 +20,7 @@ var d = jsEncode.encode(e,"123");
 
 Include jsencode.class.php into your project.
 
-You can encode the "Hello world!" with a key "123" like this:
+You can encode the string with a key "123" like this:
 
 $d = new jsEncode();
 $enc = $d->encodeString('Hello world!','123');
