@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS Encode</title>
+<script src="jsencode.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var e = jsEncode.encode("Hello world!","123");
+document.write(e);
+document.write("<br />");
+var d = jsEncode.encode(e,"123");
+document.write(d);
+</script>
+</body>
+</html>
