@@ -4,7 +4,7 @@
  *
  * @description. Generates simple questionnaire to study Japanese letters. It is possible to modify this script to study anything.
  * @version 1.0 
- * @copyright 2014 Henry ALgus. All rights reserved.
+ * @author Henry Algus <henryalgus@gmail.com>
  *
  */
 

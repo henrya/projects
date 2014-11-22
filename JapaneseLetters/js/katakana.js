@@ -4,7 +4,7 @@
 *
 * @description. Question list for Japanese study application. Katakana letters.
 * @version 1.0 
-* @copyright 2014 Henry ALgus. All rights reserved.
+* @author Henry Algus <henryalgus@gmail.com>
 *
 */
 
