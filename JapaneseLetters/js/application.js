@@ -28,10 +28,10 @@ $(document).ready(function ($) {
 	};
 	
 	// loads new question file and evals its content
-	$("#header a").click(function(e){
+	$(".nav-item a").click(function(e){
 		e.preventDefault();
-		$(this).parent().children().removeClass('active');
-		$(this).addClass('active');
+		$(this).parent().parent().children().removeClass('active');
+		$(this).parent().addClass('active');
 		var scriptName = $(this).text().toLowerCase();
 		$.get('js/'+scriptName+'.js', function( data ) {
 			eval(data);
@@ -70,7 +70,7 @@ $(document).ready(function ($) {
 			var row = $("<div/>").addClass('row');
 			for (var letter in randSelected) {
 				// add bootstrap col-xs-6 class to the row
-				var child = $("<div/>").addClass('col-xs-6');
+				var child = $("<div/>").addClass('col-md-6');
 				var anchor = $("<button/>").attr('class', 'btn btn-lg btn-default').text(randSelected[letter][0]);
 				
 				anchor.data('item', randSelected[letter][0]);
