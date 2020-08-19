@@ -46,14 +46,14 @@
 }
 
 #testletter {
-	font-size:1500%;
+	font-size:500%;
 	width:100%;
 	line-height:130%;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
 	#testletter {
-		font-size:900%;
+		font-size:200%;
 		line-height:120%;
 	}
 	
